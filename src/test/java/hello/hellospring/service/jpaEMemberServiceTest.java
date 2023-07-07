@@ -27,7 +27,7 @@ public class jpaEMemberServiceTest {
     void 회원가입() {
         // given
         Member member = new Member();
-        member.setName("오리");
+        member.setName("오리2");
 
         // when
         Long saveId = memberService.join(member);

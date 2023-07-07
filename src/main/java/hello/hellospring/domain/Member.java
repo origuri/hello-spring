@@ -1,13 +1,21 @@
 package hello.hellospring.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "member")
+@SequenceGenerator(
+        name="MEMBER_SEQ_GEN", //시퀀스 제너레이터 이름
+        sequenceName="MEMBER_SEQ", //시퀀스 이름
+        initialValue=1, //시작값
+        allocationSize=1 //메모리를 통해 할당할 범위 사이즈
+)
 public class Member {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "MEMBER_SEQ_GEN"
+    )
     private Long id;
     private String name;
 
