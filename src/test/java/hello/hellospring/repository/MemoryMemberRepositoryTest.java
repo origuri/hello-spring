@@ -12,10 +12,7 @@ public class MemoryMemberRepositoryTest {
     // 인터페이스 속성의 객체를 선언하되 객체는 클래스
     MemberRepository repository = new MemoryMemberRepository();
 
-    @AfterEach
-    public void afterEach(){
-        repository.clearStore();
-    }
+
 
     @Test
     public void save(){
