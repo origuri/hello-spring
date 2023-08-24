@@ -20,10 +20,10 @@ public class SpringConfig {
         this.memberRepository = memberRepository;
     }
 
-//    @Bean
-//    public TimeTraceAop timeTraceAop(){
-//        return new TimeTraceAop();
-//    }
+  /*  @Bean
+    public TimeTraceAop timeTraceAop(){
+        return new TimeTraceAop();
+    }*/
 
     @Bean
     public MemberService memberService(){
